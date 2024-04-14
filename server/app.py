@@ -68,8 +68,8 @@ class Login(Resource):
 class Logout(Resource):
 
     def delete(self):
-        session.pop('user_id', None)
-        return {}, 204
+        session['user_id'] = None
+        return {},204
     
 class CheckSession(Resource):
 
